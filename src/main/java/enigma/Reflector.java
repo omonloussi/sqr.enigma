@@ -18,7 +18,7 @@ public class Reflector extends Rotor {
 		}
 		return new Reflector(cipher);
 	}
-	
+	 
 	//Constructeur pour effectuer des tests sur la classe Reflector avec un constructeur vide et moins complexe
 	public Reflector() {
 		super();
