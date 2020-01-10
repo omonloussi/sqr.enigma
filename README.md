@@ -17,22 +17,22 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### Les fonctions à tester
-->public String convert(String msg)
-->char convertChar(char c)
-->void advanceRotors()
+->public String convert(String msg)   
+->char convertChar(char c)   
+->void advanceRotors()  
 
 ### Classe Reflector
 #### Les fonctions à tester
-->public String convert(String msg)
-->char convertChar(char c)
-->void advanceRotors()
+->public String convert(String msg)  
+->char convertChar(char c)  
+->void advanceRotors()   
 
 ### Classe Rotor
 #### Les fonctions à tester
-->public static Rotor rotorFactory(String str, String notches)
-->public int convertForward(int p)
-->public int convertBackward(int e)
--> public void advance()
+->public static Rotor rotorFactory(String str, String notches)  
+->public int convertForward(int p)   
+->public int convertBackward(int e)  
+-> public void advance()  
 
 ## Tricks & tips
 
