@@ -1,12 +1,15 @@
 package enigma;
 
+//This is the class which implement your Enigma Machine 
 public class Machine {
 
+	
 	private Rotor leftRotor;
 	private Rotor middleRotor;
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	//The constructor of the class which initialise the reflector and rotor (left, middle, right)
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
@@ -14,6 +17,7 @@ public class Machine {
 		rightRotor = right;
 	}
 
+	//This function set the position of reflector and the rotor of your Machine
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -22,12 +26,14 @@ public class Machine {
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
 	
+	//To configure the setting of Machine by initialise the rotor and set your position
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
 
+	//Function to convert a string letter by letter
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -38,6 +44,7 @@ public class Machine {
 		return result;
 	}
 
+	//Function to convert a character
 	char convertChar(char c) {
 		advanceRotors();
 		int charIndex = Rotor.toIndex(c);

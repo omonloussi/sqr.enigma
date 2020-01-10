@@ -8,6 +8,7 @@ import app.Main;
 
 public class MachineTest {
 	
+	
 	String config ="* B III IV I AXLE";
 	String msg1 = "FROM his shoulder Hiawatha";
 	String code1 = "HYIHBSBOEBTWJZSXMWQKYGWSFR";

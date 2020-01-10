@@ -2,19 +2,23 @@ package enigma;
 
 public class Rotor {
 
+	
     private int position;
     private int[] cipher = new int[26];
     private int[] bcipher = new int[26];
     private int notch1 = -1;
     private int notch2 = -1;
 
+    //Return the position of rotor
     public int getPosition() {
         return position;
     }
 
+    //Set the position of rotor
     public void setPosition(int posn) {
         position = posn;
     }
+    
     
 	public static Rotor rotorFactory(String str, String notches){
 		char[] s = str.trim().replace(" ", "").toCharArray();
@@ -30,6 +34,7 @@ public class Rotor {
 		}
 		
 	}
+	
 	
 	private Rotor(int[] c, int notch1, int notch2) {
 		this.notch1 = notch1;
@@ -47,15 +52,18 @@ public class Rotor {
 	protected Rotor() {
 		
 	}
-
+	
+	//convert forward the rotor by giving an position
     public int convertForward(int p) {
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
-
+    
+  //convert backward the rotor by giving an position
     public int convertBackward(int e) {
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
     
+    //To advance the rotor around 26 letter
     public void advance() {
         position = (position+1) % 26;
     }
