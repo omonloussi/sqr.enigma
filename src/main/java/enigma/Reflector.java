@@ -22,7 +22,7 @@ public class Reflector extends Rotor {
 	//Constructeur pour effectuer des tests sur la classe Reflector avec un constructeur vide et moins complexe
 	public Reflector() {
 		super();
-		reflection = null;
+		reflection = null; 
 	}
 	
 	private Reflector(int[] r){

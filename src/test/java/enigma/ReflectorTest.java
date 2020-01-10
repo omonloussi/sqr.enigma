@@ -14,7 +14,7 @@ public class ReflectorTest {
 		int expected = p;
 		int actual = ref.convertForward(p);
 		assertNotSame(expected,actual);
-	}
+	} 
 
 }
 
