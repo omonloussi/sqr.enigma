@@ -13,7 +13,7 @@ public class Reflector extends Rotor {
 	public static Reflector reflectorFactory(String str){
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
-		for (int i = 0; i< 26; i++){
+		for (int i = 0; i< 26; i++){ 
 			cipher[i] = toIndex(s[i]);
 		}
 		return new Reflector(cipher);

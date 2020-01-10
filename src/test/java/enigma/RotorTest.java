@@ -16,7 +16,7 @@ public class RotorTest {
 		int expected = pos1;
 		int actual = r.convertForward(pos1);
 		assertNotSame(expected,actual);
-	} 
+	}  
 	
 	
 	//Tester convertForward et convertBackward pour Rotor initial
